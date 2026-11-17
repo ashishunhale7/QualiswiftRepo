@@ -1,0 +1,6 @@
+Case ID,Title,Story IDs,Priority,Preconditions,Step Number,Steps,Expected Result,Test Data
+TC-001,Verify bus ticket search functionality,67,High,,1,Verify user is able to click on Source,user should be able to click on Source,"//*[@id=""search-div""]/div/div[1]"
+TC-001,Verify bus ticket search functionality,67,High,,2,Verify user is able to add source,User should able to add source,Add source text Pune
+TC-002,Add destination,67,High,User is logged into the app.,1,Navigate to destination,user should able to add destination,"//*[@id=""search-div""]/div/div[3]"
+TC-002,Add destination,67,High,User is logged into the app.,2,Select destination as Mumbai from the destination dropdown or input field.,Mumbai text should get add,text Mumbai
+TC-003,select date,67,High,,1,Open the date picker for journey date and select today's date,User should able to select date,"//*[@id=""date-box""]"
