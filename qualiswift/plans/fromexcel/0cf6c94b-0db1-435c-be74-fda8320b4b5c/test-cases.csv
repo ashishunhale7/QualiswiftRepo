@@ -1,0 +1,56 @@
+Case ID,Title,Story IDs,Priority,Preconditions,Step Number,Steps,Expected Result,Test Data
+TC-001,Verify OrangeHRM login page loads correctly,"R001, R002",High,User has access to the application URL.,1,Navigate to the application URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login,The OrangeHRM login page is displayed with Username and Password fields and a Login button.,URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+TC-002,Verify Username and Password fields are editable,"R003, R004",High,User is on the OrangeHRM login page.,1,Navigate to the OrangeHRM login page.,,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-002,Verify Username and Password fields are editable,"R003, R004",High,User is on the OrangeHRM login page.,2,Enter the username '$HRM_USERNAME' in the Username field.,,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-002,Verify Username and Password fields are editable,"R003, R004",High,User is on the OrangeHRM login page.,3,Enter the password '$HRM_PASSWORD' in the Password field.,The Username field accepts input '$HRM_USERNAME'. The Password field accepts input and masks the characters.,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-003,Verify password input is masked,R004,High,User is on the OrangeHRM login page.,1,Navigate to the OrangeHRM login page.,,Password: $HRM_PASSWORD
+TC-003,Verify password input is masked,R004,High,User is on the OrangeHRM login page.,2,Enter '$HRM_PASSWORD' in the Password field.,The password characters are masked (not shown in plain text) while being entered.,Password: $HRM_PASSWORD
+TC-004,Verify successful login with valid credentials,"R005, R006",High,User has valid OrangeHRM demo user account and access to the application URL.,1,Navigate to the OrangeHRM login page.,,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-004,Verify successful login with valid credentials,"R005, R006",High,User has valid OrangeHRM demo user account and access to the application URL.,2,Enter valid username '$HRM_USERNAME'.,,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-004,Verify successful login with valid credentials,"R005, R006",High,User has valid OrangeHRM demo user account and access to the application URL.,3,Enter valid password '$HRM_PASSWORD'.,,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-004,Verify successful login with valid credentials,"R005, R006",High,User has valid OrangeHRM demo user account and access to the application URL.,4,Click the Login button.,User is authenticated successfully and redirected to the OrangeHRM dashboard page which is displayed.,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-005,Verify error message on login attempt with invalid username,R007,High,User has access to the application URL.,1,Navigate to the OrangeHRM login page.,,"Username: InvalidUser
+Password: $HRM_PASSWORD"
+TC-005,Verify error message on login attempt with invalid username,R007,High,User has access to the application URL.,2,Enter invalid username 'InvalidUser'.,,"Username: InvalidUser
+Password: $HRM_PASSWORD"
+TC-005,Verify error message on login attempt with invalid username,R007,High,User has access to the application URL.,3,Enter valid password '$HRM_PASSWORD'.,,"Username: InvalidUser
+Password: $HRM_PASSWORD"
+TC-005,Verify error message on login attempt with invalid username,R007,High,User has access to the application URL.,4,Click the Login button.,Login is prevented and an appropriate error message is displayed indicating invalid credentials.,"Username: InvalidUser
+Password: $HRM_PASSWORD"
+TC-006,Verify error message on login attempt with invalid password,R007,High,User has access to the application URL.,1,Navigate to the OrangeHRM login page.,,"Username: $HRM_USERNAME
+Password: wrongpass"
+TC-006,Verify error message on login attempt with invalid password,R007,High,User has access to the application URL.,2,Enter valid username '$HRM_USERNAME'.,,"Username: $HRM_USERNAME
+Password: wrongpass"
+TC-006,Verify error message on login attempt with invalid password,R007,High,User has access to the application URL.,3,Enter invalid password 'wrongpass'.,,"Username: $HRM_USERNAME
+Password: wrongpass"
+TC-006,Verify error message on login attempt with invalid password,R007,High,User has access to the application URL.,4,Click the Login button.,Login is prevented and an appropriate error message is displayed indicating invalid credentials.,"Username: $HRM_USERNAME
+Password: wrongpass"
+TC-007,Verify validation when Username field is left blank,R008,High,User is on the OrangeHRM login page.,1,Navigate to the OrangeHRM login page.,,"Username: 
+Password: $HRM_PASSWORD"
+TC-007,Verify validation when Username field is left blank,R008,High,User is on the OrangeHRM login page.,2,Leave the Username field blank.,,"Username: 
+Password: $HRM_PASSWORD"
+TC-007,Verify validation when Username field is left blank,R008,High,User is on the OrangeHRM login page.,3,Enter valid password '$HRM_PASSWORD'.,,"Username: 
+Password: $HRM_PASSWORD"
+TC-007,Verify validation when Username field is left blank,R008,High,User is on the OrangeHRM login page.,4,Attempt to submit the login form by clicking Login.,Submission is prevented or a validation message is displayed indicating Username field cannot be blank.,"Username: 
+Password: $HRM_PASSWORD"
+TC-008,Verify validation when Password field is left blank,R008,High,User is on the OrangeHRM login page.,1,Navigate to the OrangeHRM login page.,,"Username: $HRM_USERNAME
+Password:"
+TC-008,Verify validation when Password field is left blank,R008,High,User is on the OrangeHRM login page.,2,Enter valid username '$HRM_USERNAME'.,,"Username: $HRM_USERNAME
+Password:"
+TC-008,Verify validation when Password field is left blank,R008,High,User is on the OrangeHRM login page.,3,Leave the Password field blank.,,"Username: $HRM_USERNAME
+Password:"
+TC-008,Verify validation when Password field is left blank,R008,High,User is on the OrangeHRM login page.,4,Attempt to submit the login form by clicking Login.,Submission is prevented or a validation message is displayed indicating Password field cannot be blank.,"Username: $HRM_USERNAME
+Password:"
+TC-009,Verify validation when both Username and Password fields are left blank,R008,High,User is on the OrangeHRM login page.,1,Navigate to the OrangeHRM login page.,,"Username: 
+Password:"
+TC-009,Verify validation when both Username and Password fields are left blank,R008,High,User is on the OrangeHRM login page.,2,Leave both Username and Password fields blank.,,"Username: 
+Password:"
+TC-009,Verify validation when both Username and Password fields are left blank,R008,High,User is on the OrangeHRM login page.,3,Attempt to submit the login form by clicking Login.,Submission is prevented or validation messages are displayed indicating both fields cannot be blank.,"Username: 
+Password:"
