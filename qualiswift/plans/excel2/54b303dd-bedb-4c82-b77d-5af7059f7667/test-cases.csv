@@ -1,0 +1,18 @@
+Case ID,Title,Story IDs,Priority,Preconditions,Step Number,Steps,Expected Result,Test Data
+TC-001,Verify OrangeHRM login page loads correctly,"R001, R002",High,User has access to the application URL.,1,Navigate to the application URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login,The OrangeHRM login page is displayed with Username and Password fields and a Login button.,URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+TC-002,Verify Username and Password fields are editable,"R003, R004",High,User is on the OrangeHRM login page.,1,Navigate to the OrangeHRM login page.,,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-002,Verify Username and Password fields are editable,"R003, R004",High,User is on the OrangeHRM login page.,2,Enter the username '$HRM_USERNAME' in the Username field.,,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-002,Verify Username and Password fields are editable,"R003, R004",High,User is on the OrangeHRM login page.,3,Enter the password '$HRM_PASSWORD' in the Password field.,The Username field accepts input '$HRM_USERNAME'. The Password field accepts input and masks the characters.,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-003,Verify password input is masked,R004,High,User is on the OrangeHRM login page.,1,Navigate to the OrangeHRM login page.,,Password: $HRM_PASSWORD
+TC-003,Verify password input is masked,R004,High,User is on the OrangeHRM login page.,2,Enter '$HRM_PASSWORD' in the Password field.,The password characters are masked (not shown in plain text) while being entered.,Password: $HRM_PASSWORD
+TC-004,Verify successful login with valid credentials,"R005, R006",High,User has valid OrangeHRM demo user account and access to the application URL.,1,Navigate to the OrangeHRM login page.,,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-004,Verify successful login with valid credentials,"R005, R006",High,User has valid OrangeHRM demo user account and access to the application URL.,2,Enter valid username '$HRM_USERNAME'.,,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-004,Verify successful login with valid credentials,"R005, R006",High,User has valid OrangeHRM demo user account and access to the application URL.,3,Enter valid password '$HRM_PASSWORD'.,,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
+TC-004,Verify successful login with valid credentials,"R005, R006",High,User has valid OrangeHRM demo user account and access to the application URL.,4,Click the Login button.,User is authenticated successfully and redirected to the OrangeHRM dashboard page which is displayed.,"Username: $HRM_USERNAME
+Password: $HRM_PASSWORD"
